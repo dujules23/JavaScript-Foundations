@@ -4,8 +4,11 @@
 /* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
 */
 
+let princpal = "200000";
 
+let interestRate = "0.05";
 
+let years = "30";
 
 
 // 🏡 Task 1.5: Simple Math
@@ -15,9 +18,11 @@
 (2) Create another variable called `periods` and give it the value of years*12.
 */
 
+let monthlyInterestRate = 0.05/12;
 
+let periods = 30*12;
 
-
+// console.log (princpal)
 // 🏡 Task 2: Harder Math
 /* Create your calculator! Use the formula in the ReadMe (also below) to run calculations on your numbers. Save the final value into a variable called monthlyRate. 
 
@@ -30,13 +35,18 @@ Hint: while these calculations can be done in one line, it might be helpful to c
 (3) Create a variable called denominator and set it equal to n1 - 1 
 (4) Create a variable called monthlyRate and set it equal to numerator/denominator
 
+
 Hint #2: you'll need to use the `math` object for parts of this calculation!
 
 When your math is correct, monthlyRate will equal 1073.64
 */
 
+let n1 = Math.pow(1 + monthlyInterestRate, 360);
+let numerator = 200000*n1*monthlyInterestRate;
+let denominator = n1 - 1;
+let monthlyRate = numerator/denominator;
 
-
+console.log(monthlyRate)
 
 // 🏡 Task 3: Function
 /* Create a function called `mortgageCalculator` that combines all of the steps from task 1 and 2 and returns a sentence "{Name}, your monthly rate is ${monthlyRate}"
@@ -44,6 +54,9 @@ When your math is correct, monthlyRate will equal 1073.64
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
+function mortgageCalulator(params) {
+    
+}
 
 
 
